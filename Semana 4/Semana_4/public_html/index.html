@@ -168,8 +168,10 @@ function mvPopMatrix() {
 
         ];
         gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
-        triangleVertexPositionBuffer.itemSize = 3;
-        triangleVertexPositionBuffer.numItems = 3;
+        triangleVertexTextureCoordBuffer = gl.createBuffer(); //semana6
+        gl.blindBuffer(gl.ARRAY_BUFFER, triangleVertexTextureCoordTexture);//semana6
+        var textureCoords = [ //semana6
+       
 		
 	triangleVertexColorBuffer = gl.createBuffer();
     	gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexColorBuffer);
